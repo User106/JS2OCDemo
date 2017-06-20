@@ -1,16 +1,15 @@
 <html>
 <body>
 
-<h1>My First Heading</h1>
+    <h1>My First Heading</h1>
 
-<p>My first paragraph.</p>
-<button onclick="test()">clickMe</button>
+    <p>My first paragraph.</p>
+    <button onclick="test()">clickMe</button>
+    <button onclick="javascript:location.href='chao://pinglun&id=100'" > 评论</button>
 </body>
 </html>
 <script type="text/javascript">
   function test(){
     window.webkit.messageHandlers.appModel.postMessage({"name":"aname"})
   }
-
-
 </script>

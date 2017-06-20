@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC8412421EF8FE4700033DD7 /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8412401EF8FE4700033DD7 /* CCViewController.m */; };
+		EC8412431EF8FE4700033DD7 /* CCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC8412411EF8FE4700033DD7 /* CCViewController.xib */; };
 		ECD853511EAE2FA100910534 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD853501EAE2FA100910534 /* main.m */; };
 		ECD853541EAE2FA100910534 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD853531EAE2FA100910534 /* AppDelegate.m */; };
 		ECD853571EAE2FA100910534 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD853561EAE2FA100910534 /* ViewController.m */; };
@@ -17,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC84123F1EF8FE4700033DD7 /* CCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCViewController.h; sourceTree = "<group>"; };
+		EC8412401EF8FE4700033DD7 /* CCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCViewController.m; sourceTree = "<group>"; };
+		EC8412411EF8FE4700033DD7 /* CCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCViewController.xib; sourceTree = "<group>"; };
 		ECD8534C1EAE2FA100910534 /* demo_wkwebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo_wkwebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD853501EAE2FA100910534 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ECD853521EAE2FA100910534 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +72,9 @@
 				ECD853681EAE373700910534 /* demo.html */,
 				ECD853581EAE2FA100910534 /* Main.storyboard */,
 				ECD8535B1EAE2FA100910534 /* Assets.xcassets */,
+				EC84123F1EF8FE4700033DD7 /* CCViewController.h */,
+				EC8412401EF8FE4700033DD7 /* CCViewController.m */,
+				EC8412411EF8FE4700033DD7 /* CCViewController.xib */,
 				ECD8535D1EAE2FA100910534 /* LaunchScreen.storyboard */,
 				ECD853601EAE2FA100910534 /* Info.plist */,
 				ECD8534F1EAE2FA100910534 /* Supporting Files */,
@@ -144,6 +152,7 @@
 				ECD853691EAE373700910534 /* demo.html in Resources */,
 				ECD8535C1EAE2FA100910534 /* Assets.xcassets in Resources */,
 				ECD8535A1EAE2FA100910534 /* Main.storyboard in Resources */,
+				EC8412431EF8FE4700033DD7 /* CCViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +165,7 @@
 			files = (
 				ECD853571EAE2FA100910534 /* ViewController.m in Sources */,
 				ECD853541EAE2FA100910534 /* AppDelegate.m in Sources */,
+				EC8412421EF8FE4700033DD7 /* CCViewController.m in Sources */,
 				ECD853511EAE2FA100910534 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

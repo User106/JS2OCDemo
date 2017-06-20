@@ -8,10 +8,10 @@
 
 #import "ViewController.h"
 #import <WebKit/WebKit.h>
-
+#import "CCViewController.h"
 static NSString *name = @"appModel";
 
-@interface ViewController ()<WKScriptMessageHandler>
+@interface ViewController ()<WKScriptMessageHandler,WKNavigationDelegate,CCViewControllerDelegate>
 @property (nonatomic, strong) WKWebView *webView;
 @end
 
@@ -41,6 +41,7 @@ static NSString *name = @"appModel";
      */
     [config.userContentController addScriptMessageHandler:self name:name];
     _webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
+    _webView.navigationDelegate = self;
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"demo.html" ofType:nil];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:filePath]];
     [_webView loadRequest:request];
@@ -56,5 +57,30 @@ static NSString *name = @"appModel";
             
         }];
     }
+}
+
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+
+    NSString *scheme = navigationAction.request.URL.scheme;
+    if ([scheme isEqualToString:@"chao"]) {
+        // 在这里做 js 调 native 的事情
+        NSLog(@"%@",navigationAction.request.URL.relativeString);
+        CCViewController *VC = [[CCViewController alloc] initWithNibName:@"CCViewController" bundle:nil];
+        VC.delegate = self;
+        [self presentViewController:VC animated:YES completion:^{
+            
+        }];
+        decisionHandler(WKNavigationActionPolicyCancel);
+        return;
+    }
+    
+    decisionHandler(WKNavigationActionPolicyAllow);
+}
+- (void)CCViewControllerDidClickBtn:(NSString *)text
+{
+    NSString *jsCode = [NSString stringWithFormat:@"document.body.innerHTML +='<br>%@'",text];
+    [_webView evaluateJavaScript:jsCode completionHandler:^(id _Nullable obj, NSError * _Nullable error) {
+        
+    }];
 }
 @end

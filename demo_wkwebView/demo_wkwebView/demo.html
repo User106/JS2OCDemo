@@ -1,0 +1,16 @@
+<html>
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+<button onclick="test()">clickMe</button>
+</body>
+</html>
+<script type="text/javascript">
+  function test(){
+    window.webkit.messageHandlers.appModel.postMessage({"name":"aname"})
+  }
+
+
+</script>
